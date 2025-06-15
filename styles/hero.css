@@ -1,0 +1,33 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* background: url('../assets/images/hero-background.png') no-repeat top/250%; */
+    
+    height: 100vh;
+    padding-top: 1.25rem;
+
+
+    & div {
+        width: 100%;
+        display: flex;
+        margin-bottom: 3rem;
+        justify-content: space-between;
+
+        & img {
+            width: 4rem;
+        }
+
+        & button {
+            
+            /* width: 5.625rem; */
+        }
+    }
+
+    & h1 {
+        margin-bottom: 1rem;
+    }
+
+}
+

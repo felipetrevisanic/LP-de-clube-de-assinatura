@@ -1,0 +1,139 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pink-light: #C59DD2;
+    --pink-base: #9547A5;
+    --pink-dark: #7d298a;
+    --pink-low: #3f0f41;
+    --blue-light: #73b6d2;
+    --blue-base: #248bb9;
+    --blue-mid: #2374a4;
+    --blue-dark: #144a72;
+    --blue-low: #08233c;
+    --shape-stroke: #002347;
+    --shape-hover: #001933;
+    --shape-base: #000f1f;
+    --shape-background: #00050a;
+    --text-color-title: #f8fbfb;
+    --text-color-body: #e2e7e9;
+    --text-color-label: #bac6c9;
+    --ff-base : "Roleway", sans-serif;
+    --title-lg: 800 1.75rem  var(--ff-base);
+    /* --title-md: 800 2.5rem  var(--ff-base); */
+    --title-sm: 800 1.5rem  var(--ff-base);
+    --title-xs: 800 1rem  var(--ff-base);
+    --subtitle: 600 1rem/1.4  var(--ff-base);
+    --text-lg: 400 1.25rem/1.4 var(--ff-base);
+    --text-md: 400 1rem/1.4 var(--ff-base);
+    --text-sm: 400 0.875rem/1.4 var(--ff-base);
+    --text-xs: 400 0.75rem/1.4 var(--ff-base);
+    --text-button: 800 .875rem/auto var(--ff-base);
+    --text-link: 600 .875rem/auto var(--ff-base);
+    --text-tag: 800 .875rem/auto var(--ff-base);
+}
+
+body{
+    width: 100%;
+    background-color: var(--shape-background);
+    color: var(--text-color-body);
+    overflow-y: scroll;
+}
+
+button {
+    color: var(--text-color-title);
+    border-radius: .5rem;
+    padding: 1.25rem;
+    height: 2.5rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2 {
+    color: var(--text-color-title);
+}
+
+h1 {
+    font: var(--title-lg);
+}
+
+h2{
+    font: var(--title-sm);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.container {
+    padding-inline: 1.25rem;
+}
+
+.btn-primary {
+    background-color: var(--pink-dark);
+    position: relative;
+    overflow: hidden;
+    scale: 1;
+    
+    &::before{
+        content: "";
+        
+        width: 1rem;
+        
+        border-radius: 50%;
+        padding: 1px;
+        position: absolute;
+        scale: 0;
+        z-index: -1;
+        transition: scale 3s ease, width 3s ease; /* Apply transition here */
+
+    }
+    
+    
+    &:hover::before{
+        scale: 1;
+        width: 200%;
+        height: 200%;
+        background-color: var(--pink-base);
+    }
+}
+
+.btn-secondary {
+    background-color: var(--blue-dark);
+
+    &:hover{
+        background-color: var(--blue-base);
+    }
+}
+
+@keyframes hoverBtn {
+    
+}
+
+@media (width >= 80em) {
+    :root {
+        --title-lg: 800 3rem  var(--ff-base);
+        --title-md: 800 2.5rem  var(--ff-base);
+        --title-sm: 800 2rem  var(--ff-base);
+        --title-xs: 800 1rem  var(--ff-base);
+        --subtitle: 600 2rem/2  var(--ff-base);
+        --text-lg: 400 1.25rem/1.4 var(--ff-base);
+        --text-md: 400 1rem/1.4 var(--ff-base);
+        --text-sm: 400 0.875rem/1.4 var(--ff-base);
+        --text-xs: 400 0.75rem/1.4 var(--ff-base);
+        --text-button: 800 .875rem/auto var(--ff-base);
+        --text-link: 600 .875rem/auto var(--ff-base);
+        --text-tag: 800 .875rem/auto var(--ff-base);
+    }
+}
+
+
