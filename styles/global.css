@@ -86,18 +86,14 @@ img {
     
     &::before{
         content: "";
-        
         width: 1rem;
-        
-        border-radius: 50%;
+        border-radius: 2rem;
         padding: 1px;
         position: absolute;
         scale: 0;
         z-index: -1;
-        transition: scale 3s ease, width 3s ease; /* Apply transition here */
-
+        transition: scale 1s ease, background-color 1s ease;
     }
-    
     
     &:hover::before{
         scale: 1;
@@ -110,7 +106,21 @@ img {
 .btn-secondary {
     background-color: var(--blue-dark);
 
-    &:hover{
+    &::before{
+        content: "";
+        width: 1rem;
+        border-radius: 2rem;
+        padding: 1px;
+        position: absolute;
+        scale: 0;
+        z-index: -1;
+        transition: scale 1s ease, background-color 1s ease;
+    }
+    
+    &:hover::before{
+        scale: 1;
+        width: 200%;
+        height: 200%;
         background-color: var(--blue-base);
     }
 }
