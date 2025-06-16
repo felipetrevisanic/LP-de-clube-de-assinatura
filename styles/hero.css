@@ -41,17 +41,21 @@
             position: absolute;
 
             &:nth-child(1){
-                top: 0;
+                top: 2.5rem;
+                right: 4.5rem;
+                rotate: 15deg;
             }
             
             &:nth-child(2){
-                bottom: 0;
-                left: 0;
+                bottom: 3rem;
+                left: 1.6rem;
+                rotate: 320deg;
             }
             
             &:nth-child(3){
-                bottom: 0;
-                right: 0;
+                bottom: 2rem;
+                right: 1.5rem;
+                rotate: 15deg;
             }
         }
     }
