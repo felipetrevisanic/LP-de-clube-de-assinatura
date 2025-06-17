@@ -3,25 +3,60 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* background: url('../assets/images/hero-background.png') no-repeat top/250%; */
-    
     height: 100vh;
-    padding-top: 1.25rem;
+    
+    
+    & .head{
+        background: url('../assets/images/hero-background.png') no-repeat top/cover;
+        padding-bottom: 15rem;
+        padding-top: 1.25rem;
 
-
-    & div {
+          
+        & div {
         width: 100%;
         display: flex;
         margin-bottom: 3rem;
         justify-content: space-between;
 
-        & img {
-            width: 4rem;
-        }
+            & img {
+                width: 4rem;
+            }
 
-        & button {
+            & button {
+                
+                /* width: 5.625rem; */
+            }
+        }
+    }
+
+    & .describe {
+        font: var(--text-md);
+        padding-block: 5rem;
+        text-align: center;  
+        position: relative;
+
+        & img {
+            width: 2.5rem;
+            height: 2.5rem;
+            position: absolute;
+
+            &:nth-child(1){
+                top: 2.5rem;
+                right: 4.5rem;
+                rotate: 15deg;
+            }
             
-            /* width: 5.625rem; */
+            &:nth-child(2){
+                bottom: 3rem;
+                left: 1.6rem;
+                rotate: 320deg;
+            }
+            
+            &:nth-child(3){
+                bottom: 2rem;
+                right: 1.5rem;
+                rotate: 15deg;
+            }
         }
     }
 
@@ -31,3 +66,9 @@
 
 }
 
+@media (width >= 80rem) {
+    .hero {
+       
+        animation-timeline: scroll 2s;
+    }
+}

@@ -23,19 +23,19 @@
     --text-color-title: #f8fbfb;
     --text-color-body: #e2e7e9;
     --text-color-label: #bac6c9;
-    --ff-base : "Roleway", sans-serif;
-    --title-lg: 800 1.75rem  var(--ff-base);
+    --ff-base : "Raleway", sans-serif;
+    --title-lg: 700 1.75rem  var(--ff-base);
     /* --title-md: 800 2.5rem  var(--ff-base); */
-    --title-sm: 800 1.5rem  var(--ff-base);
-    --title-xs: 800 1rem  var(--ff-base);
-    --subtitle: 600 1rem/1.4  var(--ff-base);
-    --text-lg: 400 1.25rem/1.4 var(--ff-base);
-    --text-md: 400 1rem/1.4 var(--ff-base);
-    --text-sm: 400 0.875rem/1.4 var(--ff-base);
-    --text-xs: 400 0.75rem/1.4 var(--ff-base);
-    --text-button: 800 .875rem/auto var(--ff-base);
-    --text-link: 600 .875rem/auto var(--ff-base);
-    --text-tag: 800 .875rem/auto var(--ff-base);
+    --title-sm: 700 1.5rem/1  var(--ff-base);
+    --title-xs: 700 1rem  var(--ff-base);
+    --subtitle: 500 1rem/1.4  var(--ff-base);
+    --text-lg: 300 1.25rem/1.4 var(--ff-base);
+    --text-md: 300 1rem/1.4 var(--ff-base);
+    --text-sm: 300 0.875rem/1.4 var(--ff-base);
+    --text-xs: 300 0.75rem/1.4 var(--ff-base);
+    --text-button: 700 .875rem/auto var(--ff-base);
+    --text-link: 500 .875rem/auto var(--ff-base);
+    --text-tag: 700 .875rem/auto var(--ff-base);
 }
 
 body{
@@ -43,6 +43,7 @@ body{
     background-color: var(--shape-background);
     color: var(--text-color-body);
     overflow-y: scroll;
+    font-family: var(--ff-base);
 }
 
 button {
@@ -86,18 +87,14 @@ img {
     
     &::before{
         content: "";
-        
         width: 1rem;
-        
-        border-radius: 50%;
+        border-radius: 2rem;
         padding: 1px;
         position: absolute;
         scale: 0;
         z-index: -1;
-        transition: scale 3s ease, width 3s ease; /* Apply transition here */
-
+        transition: scale 1s ease, background-color 1s ease;
     }
-    
     
     &:hover::before{
         scale: 1;
@@ -110,9 +107,28 @@ img {
 .btn-secondary {
     background-color: var(--blue-dark);
 
-    &:hover{
+    &::before{
+        content: "";
+        width: 1rem;
+        border-radius: 2rem;
+        padding: 1px;
+        position: absolute;
+        scale: 0;
+        z-index: -1;
+        transition: scale 1s ease, background-color 1s ease;
+    }
+    
+    &:hover::before{
+        scale: 1;
+        width: 200%;
+        height: 200%;
         background-color: var(--blue-base);
     }
+}
+
+.text-body {
+    color: var(--text-color-body);
+    font: var(--text-sm);
 }
 
 @keyframes hoverBtn {
