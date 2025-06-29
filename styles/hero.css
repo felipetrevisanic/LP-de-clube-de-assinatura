@@ -1,74 +1,64 @@
 .hero {
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100vh;
-    
-    
-    & .head{
-        background: url('../assets/images/hero-background.png') no-repeat top/cover;
-        padding-bottom: 15rem;
-        padding-top: 1.25rem;
+    height: 29rem;
 
-          
-        & div {
+    background: url('../assets/images/hero-background.png') no-repeat center/cover;
+  
+    
+    & header {
         width: 100%;
         display: flex;
-        margin-bottom: 3rem;
+        align-items: center;
         justify-content: space-between;
-
-            & img {
-                width: 4rem;
-            }
-
-            & button {
-                
-                /* width: 5.625rem; */
-            }
+        margin-bottom: 3rem;
+        
+        & picture {
+            width: 4rem;
+            height: 3rem;
         }
     }
 
-    & .describe {
-        font: var(--text-md);
-        padding-block: 5rem;
-        text-align: center;  
-        position: relative;
+    & .title {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 21rem;
+        font: var(--text-lg);
 
-        & img {
-            width: 2.5rem;
-            height: 2.5rem;
-            position: absolute;
-
-            &:nth-child(1){
-                top: 2.5rem;
-                right: 4.5rem;
-                rotate: 15deg;
-            }
-            
-            &:nth-child(2){
-                bottom: 3rem;
-                left: 1.6rem;
-                rotate: 320deg;
-            }
-            
-            &:nth-child(3){
-                bottom: 2rem;
-                right: 1.5rem;
-                rotate: 15deg;
-            }
-        }
+        
     }
-
-    & h1 {
-        margin-bottom: 1rem;
-    }
-
 }
 
+
 @media (width >= 80rem) {
+
     .hero {
-       
-        animation-timeline: scroll 2s;
+        padding-inline: 7.5rem;
+          height: 59.25rem;
+
+        & header{
+            margin-bottom: 10.35rem;
+
+            & picture {
+                width: 14.375rem;
+                height: 3.625rem;
+            }
+        }
+
+        & .title {
+            display: flex;
+            flex-direction: column;
+            max-width: 41rem;
+            gap: 2rem;
+
+            & p {
+                padding-inline: 3rem;
+            }
+        }
     }
+    
 }

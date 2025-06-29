@@ -29,9 +29,9 @@
     --title-sm: 700 1.5rem/1  var(--ff-base);
     --title-xs: 700 1rem  var(--ff-base);
     --subtitle: 500 1rem/1.4  var(--ff-base);
-    --text-lg: 300 1.25rem/1.4 var(--ff-base);
+    --text-lg: 300 0.875rem/1.4 var(--ff-base);
     --text-md: 300 1rem/1.4 var(--ff-base);
-    --text-sm: 300 0.875rem/1.4 var(--ff-base);
+    /* --text-sm:  */
     --text-xs: 300 0.75rem/1.4 var(--ff-base);
     --text-button: 700 .875rem/auto var(--ff-base);
     --text-link: 500 .875rem/auto var(--ff-base);
@@ -46,16 +46,6 @@ body{
     font-family: var(--ff-base);
 }
 
-button {
-    color: var(--text-color-title);
-    border-radius: .5rem;
-    padding: 1.25rem;
-    height: 2.5rem;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 h1, h2 {
     color: var(--text-color-title);
@@ -79,52 +69,13 @@ img {
     padding-inline: 1.25rem;
 }
 
-.btn-primary {
-    background-color: var(--pink-dark);
-    position: relative;
-    overflow: hidden;
-    scale: 1;
-    
-    &::before{
-        content: "";
-        width: 1rem;
-        border-radius: 2rem;
-        padding: 1px;
-        position: absolute;
-        scale: 0;
-        z-index: -1;
-        transition: scale 1s ease, background-color 1s ease;
-    }
-    
-    &:hover::before{
-        scale: 1;
-        width: 200%;
-        height: 200%;
-        background-color: var(--pink-base);
-    }
+.flex{ 
+    display:  flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50vh;
 }
 
-.btn-secondary {
-    background-color: var(--blue-dark);
-
-    &::before{
-        content: "";
-        width: 1rem;
-        border-radius: 2rem;
-        padding: 1px;
-        position: absolute;
-        scale: 0;
-        z-index: -1;
-        transition: scale 1s ease, background-color 1s ease;
-    }
-    
-    &:hover::before{
-        scale: 1;
-        width: 200%;
-        height: 200%;
-        background-color: var(--blue-base);
-    }
-}
 
 .text-body {
     color: var(--text-color-body);
