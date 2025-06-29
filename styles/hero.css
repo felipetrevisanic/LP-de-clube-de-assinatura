@@ -1,0 +1,61 @@
+.hero {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+    & header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+
+        & picture {
+            width: 4rem;
+            height: 3rem;
+        }
+    }
+
+    & .title {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 21rem;
+        font: var(--text-lg);
+
+        
+    }
+}
+
+
+@media (width >= 80rem) {
+
+    .hero {
+        padding-inline: 7.5rem;
+
+        & header{
+            margin-bottom: 10.35rem;
+
+            & picture {
+                width: 14.375rem;
+                height: 3.625rem;
+            }
+        }
+
+        & .title {
+            display: flex;
+            flex-direction: column;
+            max-width: 41rem;
+            gap: 2rem;
+
+            & p {
+                padding-inline: 3rem;
+            }
+        }
+    }
+    
+}
