@@ -2,18 +2,20 @@
     padding: 1.25rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    
+    height: 29rem;
 
+    background: url('../assets/images/hero-background.png') no-repeat center/cover;
+  
+    
     & header {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 3rem;
-
+        
         & picture {
             width: 4rem;
             height: 3rem;
@@ -36,6 +38,7 @@
 
     .hero {
         padding-inline: 7.5rem;
+          height: 59.25rem;
 
         & header{
             margin-bottom: 10.35rem;
