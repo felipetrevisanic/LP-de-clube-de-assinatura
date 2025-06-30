@@ -1,0 +1,105 @@
+.suprise-book{
+    padding-inline: 1.25rem;
+    text-align: center;
+    font: var(--subtitle);
+    padding-block: 5rem;
+    position: relative;
+
+    & img {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+
+        &:nth-child(1) {
+            top: 15%;
+            right: 21%;
+            rotate: 15deg;
+        }
+        &:nth-child(2) {
+            top: 65%;
+            left: 10%;
+            rotate: -30deg;
+        }
+        &:nth-child(3) {
+            top: 68%;
+            right: 6%;
+            rotate: 15deg;
+        }
+    }
+  
+}
+
+
+@media (width >= 80rem) {
+    .suprise-book{
+        margin-top: 5rem;
+        
+        & p {
+            display: inline;
+            opacity: 0.5;
+            transition: opacity 500ms;
+
+           
+            &:nth-of-type(2) {
+                transition-delay:  500ms;
+                .emphasis {
+                    transition-delay: 500ms;
+                }
+            }
+            &:nth-of-type(3) {
+                transition-delay:  1s;
+                .emphasis {
+                    transition-delay: 1s;
+                }
+            }
+
+            
+        }
+
+
+        & img {
+            width: 5rem;
+            height: 5rem;
+            scale: 0;
+
+            &:nth-child(1) {
+                top: 5%;
+                right: 50%;
+                rotate: 20deg;
+                transition: 500ms;
+            }
+            &:nth-child(2) {
+                top: 70%;
+                left: 6%;
+                rotate: 100deg;
+                transition: 500ms 500ms;
+
+            }
+            &:nth-child(3) {
+                top: 70%;
+                right: 6%;
+                rotate: -15deg;
+                transition: 500ms 1s;
+            }
+
+            
+        }
+
+        &:hover {
+            & p {
+                opacity: 1;
+
+                & .emphasis {
+                    color: var(--blue-light);
+                }
+            }
+
+            & img {
+                scale: 1;
+            }
+
+           
+        }
+    }
+}
+
