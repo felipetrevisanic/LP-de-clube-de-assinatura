@@ -116,6 +116,7 @@
 @media (width >= 80rem) {
     .kit{
         
+        
         & div:first-child {
 
             & .kit-title {
@@ -128,10 +129,89 @@
         }
 
         & .kit-image {
-            
+            min-width: 80rem;
+            height: 57.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             & p {
                 font: var(--text-md);
             }
+
+            & img[src*="pin"] {
+                position: absolute;
+                width: 13.875rem;
+                left: 19%;
+                bottom: 3%;
+                rotate: -10deg;
+            }
+
+            & img[src*="loop"] {
+                position: absolute;
+                width: 6.25rem;
+                left: 16%;
+                bottom: 26%;
+            }
+
+            & p:nth-of-type(1){
+                position: absolute;
+                left: 15%;
+                bottom: 42%;
+            }
+
+            & img[src*="book.png"] {
+                position: absolute;
+                width: 29.1875rem;
+                left: 30%;
+            }
+
+            & img[src*="curve-up"] {
+                position: absolute;
+                width: 10.90625rem;
+                top: 18%;
+                left: 19.5%;
+            }
+
+            & p:nth-of-type(2){
+                position: absolute;
+                left: 13.5%;
+                top: 13.5%;
+            }
+
+            & img[src*="yellow"] {
+                position: absolute;
+                width: 10.75rem;
+                height: 33.5rem;
+                right: 24%;
+                top: 12%;
+                rotate: 12deg;
+                z-index: -1;
+            }
+
+            & img[src*="purple"] {
+                position: absolute;
+                width: 10.75rem;
+                height: 33.5rem;
+                right: 15.5%;
+                top: 25%;
+                rotate: 22deg;
+                z-index: -2;
+            }
+
+            & img[src*="curve-down"] {
+                position: absolute;
+                width: 9.0625rem;
+                bottom: 5%;
+                right: 19%;
+            }
+
+            & p:nth-of-type(3){
+                position: absolute;
+                right: 23%;
+                bottom: 1%;
+            }
+
         }
 
     }
