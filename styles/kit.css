@@ -139,44 +139,62 @@
                 font: var(--text-md);
             }
 
-            & img[src*="pin"] {
-                position: absolute;
-                width: 13.875rem;
-                left: 19%;
-                bottom: 3%;
-                rotate: -10deg;
-            }
-
-            & img[src*="loop"] {
-                position: absolute;
-                width: 6.25rem;
-                left: 16%;
-                bottom: 26%;
-            }
-
-            & p:nth-of-type(1){
-                position: absolute;
-                left: 15%;
-                bottom: 42%;
+            & img {
+                transition: all 1s ease;
+                
             }
 
             & img[src*="book.png"] {
                 position: absolute;
                 width: 29.1875rem;
                 left: 30%;
+                z-index: 99;
             }
 
+            & img[src*="pin"] {
+                position: absolute;
+                width: 13.875rem;
+                left: 20%;
+                bottom: 3%;
+                rotate: -8deg;
+                /* transform: translateX(100%); */
+                animation: slideOutPin 1s ease forwards;
+
+            }
+            
+
+            & img[src*="loop"] {
+                position: absolute;
+                width: 6.25rem;
+                left: 15%;
+                bottom: 24%;
+                animation: slideOutPin 1s ease forwards;
+
+            }
+
+            & p:nth-of-type(1){
+                position: absolute;
+                left: 14%;
+                bottom: 39%;
+                animation: slideOutPin 1s ease forwards;
+
+            }
+
+            
             & img[src*="curve-up"] {
                 position: absolute;
                 width: 10.90625rem;
                 top: 18%;
                 left: 19.5%;
+                animation: slideOutBook 1s ease forwards;
+
             }
 
             & p:nth-of-type(2){
                 position: absolute;
                 left: 13.5%;
                 top: 13.5%;
+                animation: slideOutBook 1s ease forwards;
             }
 
             & img[src*="yellow"] {
@@ -185,8 +203,8 @@
                 height: 33.5rem;
                 right: 24%;
                 top: 12%;
-                rotate: 12deg;
                 z-index: -1;
+                animation: slideOutBookMarkYellow 1s ease forwards;
             }
 
             & img[src*="purple"] {
@@ -195,8 +213,8 @@
                 height: 33.5rem;
                 right: 15.5%;
                 top: 25%;
-                rotate: 22deg;
                 z-index: -2;
+                animation: slideOutBookMarkPurple 1s ease forwards;
             }
 
             & img[src*="curve-down"] {
@@ -204,17 +222,218 @@
                 width: 9.0625rem;
                 bottom: 5%;
                 right: 19%;
+                animation: slideOutBookMark 1s ease forwards;
+
             }
 
             & p:nth-of-type(3){
                 position: absolute;
                 right: 23%;
                 bottom: 1%;
+                animation: slideOutBookMark 1s ease forwards;
             }
+    
+
+            &:hover {
+            
+
+                 & img[src*="pin"] {
+                    animation: slideInPin 1s ease forwards;
+                }
+     
+                & img[src*="loop"] {
+                    animation: slideInPin 1s ease forwards;
+                }
+    
+                & p:nth-of-type(1){
+                    animation: slideInPin 1s ease forwards;
+                } 
+    
+                
+                & img[src*="curve-up"] {
+                    animation: slideInBook 1s ease forwards;
+                    top: 18%;
+                    left: 19.5%;
+                }
+    
+                & p:nth-of-type(2){
+                    animation: slideInBook 1s ease forwards;
+                    left: 13.5%;
+                    top: 13.5%;
+                }
+    
+                & img[src*="yellow"] {
+                    
+                    right: 24%;
+                    top: 12%;
+                    animation: slideInBookMarkYellow 1s ease forwards;
+                  
+                }
+    
+                & img[src*="purple"] {
+                    right: 15.5%;
+                    top: 25%;
+                    animation: slideInBookMarkPurple 1s ease forwards;
+                }
+    
+                & img[src*="curve-down"] {
+                    animation: slideInBookMark 1s ease forwards;
+                    bottom: 5%;
+                    right: 19%;
+                    
+                    
+                }
+    
+                & p:nth-of-type(3){
+                    animation: slideInBookMark 1s ease forwards;
+                    right: 23%;
+                    bottom: 1%;
+                } 
+            }
+
 
         }
 
     }
 
 
+}
+
+@keyframes slideInPin {
+    0% {
+        transform: translate(18rem, -8rem);   
+         }
+
+    50% {
+        transform: translateX(-3%);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+
+    }
+}
+
+@keyframes slideOutPin {
+    0% {
+       transform: translate(0, 0);   
+
+    }
+    
+    100% {
+        transform: translate(18rem, -8rem);
+        
+    }
+}
+
+@keyframes slideInBook {
+    0% {
+        transform: translate(18rem, 8rem);   
+         }
+
+    50% {
+        transform: translateX(-3%);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+
+    }
+}
+
+@keyframes slideOutBook {
+    0% {
+       transform: translate(0, 0);   
+
+    }
+    
+    100% {
+        transform: translate(18rem, 8rem);
+        
+    }
+}
+
+
+@keyframes slideInBookMarkYellow {
+    0% {
+        rotate: 22%;
+        transform: translate(-11rem, 11rem);
+    }
+
+    50% {
+        transform: translateX(3%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slideOutBookMarkYellow {
+    0% {
+       transform: translate(0, 0);   
+
+    }
+    
+    100% {
+        rotate: 0deg;
+        transform: translate(-8rem, 5rem);
+       
+    }
+}
+
+@keyframes slideInBookMarkPurple {
+    0% {
+        rotate: 22%;
+        transform: translate(-18rem, 6rem);
+    }
+
+    50% {
+        transform: translateX(3%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slideOutBookMarkPurple {
+    0% {
+       transform: translate(0, 0);   
+
+    }
+    
+    100% {
+        rotate: 0deg;
+        transform: translate(-15rem,0rem);
+       
+    }
+}
+
+
+@keyframes slideInBookMark {
+    0% {
+         transform: translate(-13rem, -10rem);  
+         }
+
+    50% {
+        transform: translateX(-3%);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+
+    }
+}
+
+@keyframes slideOutBookMark {
+    0% {
+       transform: translate(0, 0);   
+
+    }
+    
+    100% {
+        transform: translate(-13rem, -10rem);
+        
+    }
 }
