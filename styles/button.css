@@ -80,6 +80,12 @@
 }
 
 .btn-lg {
-    width: 14rem;
+    width: 10.5rem;
 }
 
+@media (width >= 80rem) {
+    
+    .btn-lg {
+    width: 11.5rem;
+}
+}

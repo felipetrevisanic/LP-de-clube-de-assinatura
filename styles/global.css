@@ -42,7 +42,7 @@ body{
     width: 100%;
     background-color: var(--shape-background);
     color: var(--text-color-body);
-    overflow-y: scroll;
+    overflow-x: hidden;
     font-family: var(--ff-base);
 }
 
