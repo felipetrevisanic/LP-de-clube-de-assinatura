@@ -104,21 +104,7 @@
                 margin-inline: auto;
             }
 
-            &:nth-child(1){
-                translate: 1rem 3rem;
-                rotate: -8deg;
-            }
-            &:nth-child(3){
-                translate: -1rem 3rem;
-                rotate: 8deg;
-            }
-
-
-            &:hover{
-                background-color: var(--shape-hover);
-                z-index: 10;
-                transform: translateY(-1rem);
-            }
+          
         }
 
         & .card:nth-child(2) {
@@ -143,11 +129,29 @@
             overflow: hidden;
             padding: initial;
            justify-content: center;
+           padding-block: 5rem;
 
-            &.card{
-
+            & .card{
+            &:nth-child(1){
+                translate: 1rem 3rem;
+                rotate: -8deg;
             }
+            &:nth-child(3){
+                translate: -1rem 3rem;
+                rotate: 8deg;
+            }
+
+
+            &:hover{
+                background-color: var(--shape-hover);
+                z-index: 10;
+                transform: translateY(-1rem);
+            }
+            }
+           
         }
+
+          
 
     }
 }

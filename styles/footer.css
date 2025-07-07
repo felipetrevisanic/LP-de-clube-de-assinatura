@@ -1,0 +1,97 @@
+footer {
+    margin-top: 6.5rem;
+    height: 26rem;
+    width: 100%;
+    background: url('../assets/images/book-trace-background.png') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+
+    & .footer-container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .875rem;
+
+        & .footer-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            & .logo {
+                margin-top: 5rem ;
+                width: 16rem;
+            }
+    
+            & .divisor{
+                border: 1px solid var(--shape-stroke);
+                width: 100%;
+            }
+    
+            & .social-media{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+    
+                & img {
+                    width: 2.5rem;
+                    padding: .5rem;
+                }
+            }   
+        }
+
+
+        & .info {
+            display: flex;
+            justify-content: start;
+            gap: 1.5rem;
+            width: 100%;
+
+            & div {
+                display: flex;
+                flex-direction: column;
+                gap: .875rem;
+
+                & p {
+                    margin-bottom: .8rem;
+                    font: var(--title-xs);
+                }
+
+                & a {
+                    color: var(--blue-base);
+                    text-decoration: none;
+                    font: var(--text-link);
+                }
+            }
+        }
+    }
+
+    
+}
+
+@media (width >= 80rem) {
+    footer{
+        margin-top: 19rem;
+
+        & .footer-container{
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            & .footer-icons{
+                max-width: 16.5rem;
+
+                & .logo {
+                    margin-top: 0;
+                }
+            }
+
+
+            & .info {
+                max-width: 19.5rem;
+                gap: 3.5rem;
+            }
+        }
+    }
+}
