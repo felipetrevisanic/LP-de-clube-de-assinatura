@@ -129,24 +129,98 @@
             overflow: hidden;
             padding: initial;
            justify-content: center;
-           padding-block: 5rem;
+           padding-block: 8rem;
 
             & .card{
-            &:nth-child(1){
-                translate: 1rem 3rem;
-                rotate: -8deg;
-            }
-            &:nth-child(3){
-                translate: -1rem 3rem;
-                rotate: 8deg;
-            }
+                position: relative;
+                transition: 400ms;
+
+                & .image-first{
+                    & img {
+                        transition: rotate 400ms;
+                    }
+
+                    & img:first-child{
+                        width: 1.625rem;
+                        position: absolute;
+                        top: -1.5rem;
+                        left: -1.5rem;
+                        rotate: -8deg;
+                    }
+
+                    & img:last-child{
+                        width: 0.8125rem;
+                       position: absolute;
+                        top: .5rem;
+                        left: -2rem;
+                        rotate: -8deg;
+                    }
+                }
+
+                & .image-second{
+                   width: 3rem;
+                   position: absolute;
+                   top: -3.5rem;
+                }
+
+                 & .image-third{
+                    & img {
+                        transition: rotate 400ms;
+                    }
+
+                    & img:first-child{
+                        width: 1.625rem;
+                        position: absolute;
+                        bottom: -1rem;
+                        right: -2rem;
+                        rotate: 8deg;
+                    }
+
+                    & img:last-child{
+                        width: 0.8125rem;
+                       position: absolute;
+                        bottom: -1.5rem;
+                        right: 1rem;
+                        rotate: 8deg;
+                    }
+                }
+
+                &:nth-of-type(1){
+                    translate: 1rem 3rem;
+                    rotate: -8deg;
+                }
+
+                &:nth-of-type(3){
+                    translate: -1rem 3rem;
+                    rotate: 8deg;
+                }
 
 
-            &:hover{
-                background-color: var(--shape-hover);
-                z-index: 10;
-                transform: translateY(-1rem);
-            }
+                &:hover{
+                    background-color: var(--shape-hover);
+                    z-index: 10;
+                    transform: translateY(-1rem);
+                    
+                    & .image-first{
+                        & img:first-child{
+                            rotate: -16deg;
+                        }
+
+                        & img:last-child{
+                            rotate: 0deg;
+                        }
+                    }
+
+                     & .image-third{
+                        & img:first-child{
+                            rotate: 16deg;
+                        }
+
+                        & img:last-child{
+                            rotate: 0deg;
+                        }
+                    }
+                }
             }
            
         }
